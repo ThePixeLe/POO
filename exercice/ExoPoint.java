@@ -29,12 +29,23 @@ public class ExoPoint {
         }
 
         public void setX(double X) {
-             
+             // manque peut etre this.
         }
 
         public void setY(double Y) {
-            
+             // manque peut etre this.
         }
+
+         public void permuter (ExoPoint Point) {
+         
+        }
+
+         public void Point (  double x, double y) {
+
+        }
+
+
+
 
       
     
