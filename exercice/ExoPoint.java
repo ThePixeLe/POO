@@ -40,9 +40,15 @@ public class ExoPoint {
          
         }
 
-         public void Point (  double x, double y) {
+         public void Point (double x, double y) {
 
         }
+
+        public void seDeplacer (double x, double y) {
+            
+        }
+
+        public 
 
 
 
