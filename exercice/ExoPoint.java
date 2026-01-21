@@ -48,7 +48,9 @@ public class ExoPoint {
             
         }
 
-        public 
+        public symAbcisse (ExoPoint Point) {
+
+        }
 
 
 
