@@ -14,7 +14,10 @@ public class ExoPoint {
     public ExoPoint(double x, double y) {
         this.x = x ;    // this.x fait référence à l'attribut de l'objet, x au paramètre
         this.y = y ;    // this.y fait référence à l'attribut de l'objet, y au paramètre
+   
+    }
 
+    // Méthodes
 
     
         public double getX() {
@@ -25,21 +28,16 @@ public class ExoPoint {
             return y;
         }
 
-        public void permuter (unPoint Point) {
-         
+        public void setX(double X) {
+             
         }
 
-        public void Point() {
-
+        public void setY(double Y) {
+            
         }
 
-        public void Point (_X :double, _Y :double) {
-
-        }
-
-        
-    }
+      
     
 }
 
-// ExoPoint.java
+
