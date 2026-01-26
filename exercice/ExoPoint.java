@@ -2,25 +2,13 @@ package exercice;
 
 public class ExoPoint {
     // Attributs de la classe
+
     private double x = 0;
     private double y = 0;
 
+    // proprieter 
 
-    // Constructeur
-    public ExoPoint() {
-    }
-
-    
-    public ExoPoint(double x, double y) {
-        this.x = x ;    // this.x fait référence à l'attribut de l'objet, x au paramètre
-        this.y = y ;    // this.y fait référence à l'attribut de l'objet, y au paramètre
-   
-    }
-
-    // Méthodes
-
-    
-        public double getX() {
+     public double getX() {
             return x;
         }
 
@@ -28,29 +16,72 @@ public class ExoPoint {
             return y;
         }
 
-        public void setX(double X) {
-             // manque peut etre this.
+
+            public void setX(double newval) {
+            this.x = newval;
         }
 
-        public void setY(double Y) {
-             // manque peut etre this.
+        public void setY(double newval) {
+            this.y = newval;
         }
 
-         public void permuter (ExoPoint Point) {
-         
+    // constructeur
+
+    public  ExoPoint() {
+        this.x = 0 ;    // this.x fait référence à l'attribut de l'objet, x au paramètre
+        this.y = 0 ;    // this.y fait référence à l'attribut de l'objet, y au paramètre
+   
+    }
+
+    public  ExoPoint(double _X, double _Y) {
+
+        this.x=_X;
+        this.y=_Y;
+
+    }
+
+
+    // Méthodes
+
+    
+         public void permuter () {
+            double temp=this.x;
+            this.x=this.y;
+            this.y=temp;
         }
 
-         public void Point (double x, double y) {
+        public void seDeplacer (double _newx, double _newy) {
+            this.x=_newx;
+            this.y=_newy; 
+        }
+
+        public void symAbcisse () {
+            ExoPoint symAPoint= new ExoPoint(getX(), -getY());
+
+
+            return symAPoint;
+        }
+
+        public void symOrdonnées () {
 
         }
 
-        public void seDeplacer (double x, double y) {
-            
-        }
-
-        public symAbcisse (ExoPoint Point) {
+        public void symOrigine () {
 
         }
+
+        /*public class Main {
+        public static void main(String[] args) {
+            Television maTV = new Television();
+
+
+
+
+            // CE QUE JE PEUX FAIRE : 
+
+            maTV.allumer();       // OK
+        }
+    } */
 
 
 
