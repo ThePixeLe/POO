@@ -7,12 +7,6 @@ public class AppCompte {
 
         Scanner sc= new Scanner(System.in);
 
-       
-
-
-
-
-
         System.out.println("De combien voulez vous crediter votre compte ?");
      
         
