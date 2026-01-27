@@ -1,5 +1,22 @@
-public class App {
+import java.util.Scanner;
+
+public class AppCompte {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        int    numeros;
+        String nomProprietaire;
+        double decouvertAutoriser, solde;
+        
+
+        Scanner sc= new Scanner(System.in);
+
+       
+
+
+
+
+
+        System.out.println("De combien voulez vous crediter votre compte ?");
+        
     }
 }
