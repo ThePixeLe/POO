@@ -28,7 +28,7 @@ public class AppCompte {
         // Tests des opérations
         System.out.println("\n=== Tests des opérations ===");
         compte.crediter(500);
-        System.out.println("Après dépôt de 500 : " + compte.getsolde()); // Devrait être 900
+        System.out.println("Après dépôt de 500 : " + compte.getsolde()); 
 
         compte.debiter(200);
         System.out.println("Après retrait de 200 : " + compte.getsolde()); 
