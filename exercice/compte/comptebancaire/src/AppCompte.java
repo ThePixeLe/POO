@@ -27,13 +27,13 @@ public class AppCompte {
         
         // Tests des opérations
         System.out.println("\n=== Tests des opérations ===");
-        compte.crediter(500.0);
+        compte.crediter(500);
         System.out.println("Après dépôt de 500 : " + compte.getsolde()); // Devrait être 900
 
-        compte.debiter(200.0);
+        compte.debiter(200);
         System.out.println("Après retrait de 200 : " + compte.getsolde()); 
 
-       boolean resultat = compte.debiter(1000.0);
+       boolean resultat = compte.debiter(1000);
         System.out.println("Statut du retrait de 1000 euro : " + (resultat ? "ACCEPTÉ" : "REFUSÉ"));
         System.out.println("Solde final : " + compte.getsolde());
         sc.close();
