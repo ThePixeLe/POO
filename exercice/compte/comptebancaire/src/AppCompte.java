@@ -24,8 +24,6 @@ public class AppCompte {
         System.out.println("\n=== Informations du compte ===");
         System.out.println(compte);
 
-        System.out.println("Tentative de retrait de 1000€... Réussi ? " + compte.debiter(1000.0));
-        System.out.println("Solde final : " + compte.getsolde());
         
         // Tests des opérations
         System.out.println("\n=== Tests des opérations ===");
@@ -33,12 +31,11 @@ public class AppCompte {
         System.out.println("Après dépôt de 500 : " + compte.getsolde()); // Devrait être 900
 
         compte.debiter(200.0);
-        System.out.println("Après retrait de 200 : " + compte.getsolde()); // Devrait être 700
+        System.out.println("Après retrait de 200 : " + compte.getsolde()); 
 
-        boolean ok = compte.debiter(1000.0);
-        System.out.println("Tentative de retrait de 1000... Réussi ? " + ok);
-        System.out.println("Solde final : " + compte.getsolde()); // Devrait être -300
-        
+       boolean resultat = compte.debiter(1000.0);
+        System.out.println("Statut du retrait de 1000 euro : " + (resultat ? "ACCEPTÉ" : "REFUSÉ"));
+        System.out.println("Solde final : " + compte.getsolde());
         sc.close();
     }
 }

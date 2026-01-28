@@ -69,7 +69,7 @@ public class CompteBancaire {
      * @return true si l'opération a réussi, false sinon
      */
     public boolean debiter(double montant) {
-        if (montant > 0 && (this.solde - montant) >= this.decouvertAutorise) {
+        if (montant > 0 && (this.solde - montant) >= -this.decouvertAutorise) {
             this.solde -= montant;
             return true;
         }
