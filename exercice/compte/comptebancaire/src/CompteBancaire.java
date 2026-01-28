@@ -1,104 +1,105 @@
-
-
 /**
  * @author LSoilihi
- * @version 1.0
- * @created 26-janv.-2026 14:48:22
+ * @version 1.1
+ * @created 26-janv.-2026
  */
 public class CompteBancaire {
 
-	private int numero;
-	private String nomProprietaire;
-	private double solde;
-	private double decouvertAutoriser;
+    // Attributs privés
+    private int numero;
+    private String nomProprietaire;
+    private double solde;
+    private double decouvertAutorise;
+  
+    // --- Constructeurs ---
+
+    public CompteBancaire() {
+        this.numero = 1258745621;
+        this.nomProprietaire = "pierre";
+        this.solde = 400;
+        this.decouvertAutorise = 1000.0;
+    }
+
+    public CompteBancaire(int _num, String _nomProprio, double _solde, double _decouvertAutorise) {
+        this.numero = _num;
+        this.nomProprietaire = _nomProprio;
+        this.solde = _solde;
+        this.decouvertAutorise = _decouvertAutorise;
+    }
+
+    // --- Accesseurs (Getters) et Mutateurs (Setters) ---
+
+    public String getnomProprietaire() {
+        return nomProprietaire;
+    }
+
+    public int getnumero() {
+        return numero;
+    }
+
+    public double getsolde() {
+        return solde;
+    }
+
+    public void setsolde(double newVal) {
+        this.solde = newVal;
+    }
+
+    public double getdecouvertAutorise() {
+        return decouvertAutorise;
+    }
+
+    public void setdecouvertAutorise(double newVal) {
+        this.decouvertAutorise = newVal;
+    }
+
+    // --- Méthodes de gestion du compte ---
+
+    /**
+     * Ajoute un montant au solde
+     */
+    public void crediter(double montant) {
+        if (montant > 0) {
+            this.solde += montant;
+        }
+    }
+
+    /**
+     * Retire un montant si le découvert autorisé le permet
+     * @return true si l'opération a réussi, false sinon
+     */
+    public boolean debiter(double montant) {
+        if (montant > 0 && (this.solde - montant) >= this.decouvertAutorise) {
+            this.solde -= montant;
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Transfère un montant du compte courant vers un autre compte
+     */
+    public boolean transfert(double montant, CompteBancaire autreCompte) {
+        if (this.debiter(montant)) {
+            autreCompte.crediter(montant);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Compare le solde du compte courant avec un autre compte
+     */
+    public boolean superieur(CompteBancaire autreCompte) {
+        return this.solde > autreCompte.getsolde();
+    }
 
 
 
-	
+    // --- Affichage ---
 
-	public final void CompteBancaire(){
-
-	}
-
-	/**
-	 * 
-	 * @param _num
-	 * @param _nomProprio
-	 * @param _solde
-	 * @param _decouvertAutorise
-	 */
-	public final void CompteBancaire(int _num, String _nomProprio, double _solde, double _decouvertAutorise){
-
-	}
-
-	public String getnomProprietaire(){
-		return nomProprietaire;
-	}
-
-	public String getnumero(){
-		return numero;
-	}
-
-	public double getsolde(){
-		return solde;
-	}
-
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setsolde(double newVal){
-		solde = newVal;
-	}
-
-	public double getdecouvertAutoriser(){
-		return decouvertAutoriser;
-	}
-
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setdecouvertAutoriser(double newVal){
-		decouvertAutoriser = newVal;
-	}
-
-	/**
-	 * 
-	 * @param _double montant
-	 */
-	public void crediter(double _double montant){
-
-	}
-
-	/**
-	 * 
-	 * @param _doublemontant
-	 */
-	public boolean debiter(double _doublemontant){
-		return false;
-	}
-
-	/**
-	 * 
-	 * @param montant
-	 * @param autreCompte
-	 */
-	public boolean transfert(double montant, CompteBancaire autreCompte){
-		return false;
-	}
-
-	/**
-	 * 
-	 * @param autreCompte
-	 * @param comparer
-	 */
-	public boolean superieur(CompteBancaire autreCompte, boolean comparer){
-		return false;
-	}
-
-	public String toString(){
-		return "";
-	}
-
+    @Override
+    public String toString() {
+        return "Compte n°" + numero + " [" + nomProprietaire + "] | Solde : " + solde + " euro | Découvert autorisé : " + decouvertAutorise + " euro ";
+    }
 }
