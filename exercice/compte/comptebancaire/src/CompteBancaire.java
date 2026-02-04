@@ -17,7 +17,7 @@ public class CompteBancaire {
         this.numero = 1258745621;
         this.nomProprietaire = "pierre";
         this.solde = 400;
-        this.decouvertAutorise = 1000.0;
+        this.decouvertAutorise = 1000;
     }
 
     public CompteBancaire(int _num, String _nomProprio, double _solde, double _decouvertAutorise) {
