@@ -1,8 +1,8 @@
-package System;
+
 
 /**
  * @version 1.0
- * @created 06-févr.-2026 09:52:58
+ * @created 06-fï¿½vr.-2026 09:52:58
  */
 public class Fraction {
 

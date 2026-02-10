@@ -1,5 +1,3 @@
-package model;
-
 public class AppFraction {
 
     public static void main(String[] args) {

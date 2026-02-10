@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "exercice/compte/ProjetBanque/Compte.java/src",
+        "exercice/compte",
+        "exercice/Fraction"
+    ]
+}

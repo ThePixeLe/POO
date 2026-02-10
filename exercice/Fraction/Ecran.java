@@ -1,5 +1,3 @@
-package model;
-
 /**
  * Classe responsable de l'affichage des fractions.
  */
